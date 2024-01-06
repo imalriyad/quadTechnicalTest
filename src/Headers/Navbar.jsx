@@ -5,9 +5,9 @@ const Navbar = () => {
     <>
       <li>
         <details>
-          <summary className="bg-white font-medium uppercase">Menu</summary>
+          <summary className="bg-white text-xs font-medium uppercase">Menu</summary>
           <ul
-            className="p-2 w-40 normal-case md:static md:right-0
+            className="p-2 w-44 normal-case md:static md:right-0
           absolute right-8"
           >
             <li className="hover:text-[#F99F1C]">
@@ -42,7 +42,7 @@ const Navbar = () => {
             style={{
               fontFamily: "'Baloo 2', 'CM Sans Serif 2012', sans-serif",
             }}
-            className="btn text-black btn-ghost text-2xl  font-bold"
+            className="btn text-black btn-ghost xl:text-3xl text-2xl  font-bold"
           >
             pti.
           </a>
@@ -51,11 +51,11 @@ const Navbar = () => {
           <div className="px-3 absolute left-0"><CiSearch className="text-lg" /></div>
           <input
             type="text"
-            placeholder="Find Your Food"
-            className="input pl-9 md:text-sm text-xs input-bordered input-sm focus:outline-none md:w-full w-3/4 max-w-md"
+            placeholder="Search Food"
+            className="input pl-9 md:text-sm  text-xs input-bordered input-sm focus:outline-none md:w-full w-3/4 max-w-md"
           />
 
-          <ul className="menu text-sm menu-horizontal px-1">{navmenu}</ul>
+          <ul className="menu z-10 text-sm menu-horizontal px-1">{navmenu}</ul>
         </div>
         <div className="navbar-end hidden lg:flex">
           <a className="btn">Button</a>

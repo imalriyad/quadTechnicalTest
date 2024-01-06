@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 * {
-    font-family: 'cm-sans-serif-2012', 'Baloo 2', sans-serif;
     box-sizing: border-box;
 }
+
 
 .menu :where(li > details[open] > summary):after, .menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after{
     color: #F99F1C;
