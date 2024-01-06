@@ -9,7 +9,7 @@ const Hero = () => {
           />
           <div className="md:p-10 p-2">
             <h1 className="xl:text-5xl lg:text-4xl text-2xl md:text-[#FFF3EC] capitalize font-medium ">Deliver Food to your door step</h1>
-            <p className="py-4 xl:text-xl lg:text-base text-sm md:text-[#f3dbb7] text-gray-600">
+            <p className="py-4 xl:text-xl lg:text-base text-sm md:text-[#f3dbb7] md:text-left text-center text-gray-600">
             Authentic Food, Quick Service, Fast Delivery
             </p>
            

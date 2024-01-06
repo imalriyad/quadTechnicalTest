@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
 import Slider from "react-slick";
-import '../sliderstyle.css'
+import "../sliderstyle.css";
 import { useRef } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import useFoods from "../../Hooks/useFoods";
 
-
 const RecomCard = () => {
   const [foods] = useFoods();
-  const foodItem = foods?.Items;
-  const isRecommended = foodItem?.filter((food) => food.IsRecommended === true);
+
+  const isRecommended = foods?.filter((food) => food.IsRecommended === true);
 
   const sliderRef = useRef(null);
 
@@ -51,12 +50,12 @@ const RecomCard = () => {
 
   return (
     <div className="overflow-x-hidden">
-
       <div className="flex pb-4 items-center justify-end">
+        <h1 className="text-[#FC6011] font-medium cursor-pointer">Add More</h1>
         <h1 onClick={handlePrevious}>
           <IoIosArrowBack className="md:text-3xl text-lg  cursor-pointer " />
         </h1>
-        <div onClick={handleNextSlide} >
+        <div onClick={handleNextSlide}>
           <IoIosArrowForward className="md:text-3xl text-lg cursor-pointer" />
         </div>
       </div>
@@ -66,7 +65,7 @@ const RecomCard = () => {
             <img
               src={item?.ImageUrl}
               alt=""
-              className="rounded-xl md:w-[250px] xl:h-[300px] md:h-[250px] w-[150px] h-[150px] object-cover"
+              className="rounded-xl md:w-[250px] xl:h-[300px] md:h-[250px] w-[150px] cursor-pointer h-[150px] object-cover"
             />
             <h1 className="text-center md:text-base text-sm">{item?.Name}</h1>
           </div>

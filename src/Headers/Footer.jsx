@@ -8,6 +8,8 @@ const Footer = () => {
     <div className="bg-[#F99F1C] h-[300px] ">
       <div className="flex justify-between max-w-screen-lg mx-auto items-center">
         <div className="flex max-w-lg w-full pt-10 px-6 justify-between flex-col">
+            
+          {/* Subsrcibe */}
           <div className="max-w-lg w-full relative">
             <input
               type="text"
@@ -19,6 +21,7 @@ const Footer = () => {
             </button>
           </div>
 
+          {/* Logo icon */}
           <div className="flex md:flex-row flex-col-reverse items-center md:pt-24 pt-10 justify-between">
             <span className="md:flex py-5 gap-3 md:text-left text-center flex-col md:space-y-0  md:pt-0 pt-8 space-y-5">
               <a
@@ -34,6 +37,7 @@ const Footer = () => {
               </p>
             </span>
 
+            {/* Social icon */}
             <div className="flex gap-4 items-center">
               <span className="md:bg-[#FEDEBC] bg-[#FC6011] text-[#FEDEBC] cursor-pointer p-2 rounded-full">
                 <FaGoogle className="text-lg md:text-[#FC6011]" />

@@ -61,7 +61,7 @@ const Navbar = () => {
 
           <ul className="menu z-10 text-sm menu-horizontal px-1">{navmenu}</ul>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden md:flex">
           <div className="avatar">
             <div className="w-9 cursor-pointer rounded-full">
               <img src="https://i.postimg.cc/brzv6bH3/avatar.png" className="drop-shadow-xl" />
