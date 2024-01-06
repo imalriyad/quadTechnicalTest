@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
 import Slider from "react-slick";
 import "../sliderstyle.css";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import useFoods from "../../Hooks/useFoods";
+import { FoodContext } from "../../Context/ContextProvider";
+
 
 const RecomCard = () => {
-  const [foods] = useFoods();
+  const { foods, updateItem } = useContext(FoodContext);
+  let displayedFoods;
 
-  const isRecommended = foods?.filter((food) => food.IsRecommended === true);
+  if (!updateItem || updateItem.length === 0) {
+    displayedFoods = foods;
+  } else {
+    displayedFoods = updateItem;
+  }
+  const isRecommended = displayedFoods?.filter(item => item.IsRecommended === true)
 
   const sliderRef = useRef(null);
 
@@ -51,7 +58,12 @@ const RecomCard = () => {
   return (
     <div className="overflow-x-hidden">
       <div className="flex pb-4 items-center justify-end">
-        <h1 className="text-[#FC6011] font-medium cursor-pointer">Add More</h1>
+        <h1
+          onClick={() => document.getElementById("my_modal_3").showModal()}
+          className="text-[#FC6011] font-medium cursor-pointer"
+        >
+          Add More
+        </h1>
         <h1 onClick={handlePrevious}>
           <IoIosArrowBack className="md:text-3xl text-lg  cursor-pointer " />
         </h1>

@@ -8,9 +8,6 @@ import { FoodContext } from "../../Context/ContextProvider";
 
 const PopulerCard = () => {
   const { foods, updateItem } = useContext(FoodContext);
-  // const storedFoods = localStorage.getItem("foods");
-  // const parsedFoods = JSON.parse(storedFoods);
-
   let displayedFoods;
 
   if (!updateItem || updateItem.length === 0) {
@@ -19,6 +16,7 @@ const PopulerCard = () => {
     displayedFoods = updateItem;
   }
 
+  const isPopular = displayedFoods?.filter(item => item.IsPopular === true)
   const sliderRef = useRef(null);
 
   const settings = {
@@ -75,7 +73,7 @@ const PopulerCard = () => {
         </h1>
       </div>
       <Slider ref={sliderRef} {...settings}>
-        {displayedFoods?.map((item) => (
+        {isPopular?.map((item) => (
           <div key={item?.Id} className="custom-slide-wrapper">
             <img
               src={item?.ImageUrl}
