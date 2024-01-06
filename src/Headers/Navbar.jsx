@@ -5,7 +5,9 @@ const Navbar = () => {
     <>
       <li>
         <details>
-          <summary className="bg-white text-xs font-medium uppercase">Menu</summary>
+          <summary className="bg-white text-xs font-medium uppercase">
+            Menu
+          </summary>
           <ul
             className="p-2 w-44 normal-case md:static md:right-0
           absolute right-8"
@@ -48,7 +50,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className="md:navbar-center relative navbar-start md:w-2/5 w-full">
-          <div className="px-3 absolute left-0"><CiSearch className="text-lg" /></div>
+          <div className="px-3 absolute left-0">
+            <CiSearch className="text-lg" />
+          </div>
           <input
             type="text"
             placeholder="Search Food"
@@ -58,7 +62,11 @@ const Navbar = () => {
           <ul className="menu z-10 text-sm menu-horizontal px-1">{navmenu}</ul>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <a className="btn">Button</a>
+          <div className="avatar">
+            <div className="w-9 cursor-pointer rounded-full">
+              <img src="https://i.postimg.cc/brzv6bH3/avatar.png" className="drop-shadow-xl" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

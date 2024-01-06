@@ -3,15 +3,25 @@
 @tailwind utilities;
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-.menu :where(li > details[open] > summary):after, .menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after{
-    color: #F99F1C;
+.menu :where(li > details[open] > summary):after,
+.menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
+  color: #f99f1c;
 }
 
+.menu :where(li > details > summary):after,
+.menu :where(li > .menu-dropdown-toggle):after {
+  color: #f99f1c;
+}
 
-.menu :where(li > details > summary):after, .menu :where(li > .menu-dropdown-toggle):after {
-    color: #F99F1C;
+.slick-track {
+  height: 180px;
+}
+
+@media (max-width: 768px) {
+  .slick-track {
+    height: 140px;
+  }
 }
